@@ -1,0 +1,27 @@
+# === POSTGRES ===
+# Abaikan semua file di postgres dan subfoldernya
+postgres/**/*
+# Tapi tetap commit struktur folder kosong
+!postgres/**/
+!postgres/.gitkeep
+!postgres/postgres_data/.gitkeep
+
+# === CLICKHOUSE ===
+# Abaikan semua file di clickhouse dan subfoldernya
+clickhouse/**/*
+# Tapi tetap commit struktur folder kosong
+!clickhouse/**/
+!clickhouse/.gitkeep
+!clickhouse/data/.gitkeep
+!clickhouse/clickhouse-server/.gitkeep
+!clickhouse/clickhouse-keeper/.gitkeep
+
+# === KAFKA ===
+# Abaikan semua file di kafka dan subfoldernya
+kafka/**/*
+# Tapi tetap commit struktur folder kosong
+!kafka/**/
+!kafka/.gitkeep
+!kafka/connectors/.gitkeep
+!kafka/plugins/.gitkeep
+!kafka/kafka-data/.gitkeep

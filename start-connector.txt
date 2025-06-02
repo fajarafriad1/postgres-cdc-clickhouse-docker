@@ -1,0 +1,11 @@
+1. getting the after state only (JSON)
+curl --location --request PUT 'http://localhost:9083/connectors/after-state-only-json/config'   --header 'Content-Type: application/json'   --data-binary @./connectors/after-state-only-json.json
+
+2. getting the after state only (AVRO)
+curl --location --request PUT 'http://localhost:9083/connectors/after-state-only-avro/config'   --header 'Content-Type: application/json'   --data-binary @./connectors/after-state-only-avro.json
+
+3. getting the full event change (JSON)
+curl --location --request PUT 'http://localhost:9083/connectors/full-change-event-json/config'   --header 'Content-Type: application/json'   --data-binary @./connectors/full-change-event-json.json
+
+4. getting the full event change (AVRO)
+curl --location --request PUT 'http://localhost:9083/connectors/full-change-event-avro/config'   --header 'Content-Type: application/json'   --data-binary @./connectors/full-change-event-avro.json

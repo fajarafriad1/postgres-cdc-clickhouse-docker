@@ -1,0 +1,40 @@
+{
+    "name": "after-state-only-json",
+  
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.history.kafka.bootstrap.servers": "cdc-broker:29092",
+    "database.history.kafka.topic": "cdc-schema-changes.cdc",
+    "database.history.skip.unparseable.ddl": "true",
+  
+    "database.dbname": "cdc",
+    "database.hostname": "cdc-postgres",
+    "database.port": "5432",
+    "database.server.name": "cdc",
+    "database.user": "postgres",
+    "database.password": "postgres",
+  
+    "plugin.name": "pgoutput",
+    "snapshot.mode": "initial",
+    "table.include.list": "public.users",
+    "tasks.max": "1",
+  
+    "topic.creation.default.cleanup.policy": "delete",
+    "topic.creation.default.partitions": "1",
+    "topic.creation.default.replication.factor": "1",
+    "topic.creation.default.retention.ms": "604800000",
+    "topic.creation.enable": "true",
+    "topic.prefix": "after-state-only-json",
+  
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+  
+   "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+  
+    "auto.offset.reset": "earliest",
+      "slot.name": "slot_after_state_only_json"
+  }
+  
