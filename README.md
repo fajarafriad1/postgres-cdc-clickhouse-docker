@@ -47,7 +47,7 @@ This repository contains a Docker Compose configuration to set up a complete CDC
 
 ```bash
 git clone https://github.com/fajarafriad1/postgres-cdc-clickhouse-docker.git
-cd your-repo
+cd postgres-cdc-clickhouse-docker
 ```
 
 ### 2. Build the containers
